@@ -152,16 +152,23 @@
     width: auto;
     height: auto;
   }
-
   img {
-    max-width: 175px;
-    border-radius: 50%;
-
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid var(--global-border-color);
-    }
+    width: 175px;
+    height: 195px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
   }
+  // img {
+  //   max-width: 175px;
+  //   border-radius: 8px;
+
+  //   @include breakpoint($large) {
+  //     padding: 5px;
+  //     border: 1px solid var(--global-border-color);
+  //   }
+  // }
 }
 
 .author__content {

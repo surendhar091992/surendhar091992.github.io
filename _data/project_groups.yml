@@ -1,0 +1,13 @@
+- id: adaptive-coverage
+  title: "Adaptive Coverage Control"
+  url: /portfolio/adaptive-coverage/
+  excerpt: "Adaptive coverage control for multi-agent robotic systems."
+  header:
+    teaser: "adaptive-coverage.png"
+
+# - id: distributed-optimization
+#   title: "Distributed Optimization"
+#   url: /portfolio/distributed-optimization/
+#   excerpt: "Distributed optimization algorithms for networked systems."
+#   header:
+#     teaser: "distributed-optimization.jpg"

@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "Distributed Optimization"
+permalink: /portfolio/distributed-optimization/
+author_profile: true
+---
+
+<p>
+Research projects and experimental demonstrations
+in distributed optimization.
+</p>
+
+<div class="grid__wrapper">
+
+  {% assign projects = site.portfolio
+     | where: "project_group", "distributed-optimization"
+     | sort: "order" %}
+
+  {% for post in projects %}
+
+    {% include archive-single.html type="grid" %}
+
+  {% endfor %}
+
+</div>

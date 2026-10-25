@@ -1,0 +1,77 @@
+---
+layout: archive
+title: "Adaptive Coverage Control"
+permalink: /portfolio/adaptive-coverage/
+author_profile: true
+---
+<!-- <h2>Adaptive Coverage Control</h2> -->
+
+
+<!-- Full-width image -->
+<div style="width: 100%; margin: 25px 0;">
+
+  <img
+    src="{{ '/images/adaptive_coverage_control_illustration.png' | relative_url }}"
+    alt="Adaptive Coverage Control Overview"
+    style="width: 100%; height: auto; display: block; border-radius: 8px;"
+  >
+
+</div>
+<p>
+In modern autonomous systems, efficient coverage is essential for
+surveillance, data collection, and environmental monitoring.
+Adaptive coverage control enables mobile agents to strategically
+position themselves based on real-time information, with applications
+in crowd monitoring, precision agriculture, and environmental sensing.
+</p>
+
+<p>
+Autonomous systems, particularly UAVs, often operate under constraints
+such as limited flight time, sensing capabilities, and communication
+resources. Distributed coverage algorithms enable agents to
+coordinate their movements and efficiently cover designated regions
+of the environment.
+</p>
+
+<p>
+Using Voronoi-based partitioning, each agent is responsible for a
+specific region and communicates primarily with its Voronoi neighbours.
+This decentralized approach reduces communication requirements
+and improves scalability in multi-agent systems.
+</p>
+
+<h3>Objectives of Distributed Adaptive Coverage Control</h3>
+
+<p>
+The primary objectives of Distributed Adaptive Coverage Control (DACC)
+are:
+</p>
+
+<ol>
+  <li>
+    <strong>Coverage Optimization:</strong>
+    Drive mobile agents toward optimal positions by minimizing
+    a locational cost function associated with the coverage task.
+  </li>
+
+  <li>
+    <strong>Sensory Function Estimation:</strong>
+    Estimate the unknown spatial distribution of the quantity
+    of interest (sensory function) using measurements collected
+    by the agents.
+  </li>
+</ol>
+
+<div class="grid__wrapper">
+
+  {% assign projects = site.portfolio
+     | where: "project_group", "adaptive-coverage"
+     | sort: "order" %}
+
+  {% for post in projects %}
+
+    {% include archive-single.html type="grid" %}
+
+  {% endfor %}
+
+</div>

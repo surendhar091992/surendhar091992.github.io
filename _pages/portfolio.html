@@ -1,14 +1,112 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Research Projects"
 permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+<style>
+
+/* Portfolio grid */
+.research-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* Individual cards */
+.research-project-card {
+  display: block;
+  min-width: 0;
+  border: 1px solid #666;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Images */
+.research-project-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: white;
+}
+
+/* Card content */
+.research-project-content {
+  padding: 15px;
+}
+
+.research-project-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+  color: #20a9c8;
+}
+
+.research-project-content p {
+  font-size: 0.85em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Hover */
+.research-project-card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .research-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
 
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+<p>
+This portfolio showcases my research in adaptive control,
+multi-agent robotic systems, and hardware implementation.
+The projects provide brief overviews of the proposed approaches,
+numerical simulations, and experimental validation using
+networks of quadrotor UAVs.
+</p>
+
+
+<div class="research-project-grid">
+
+{% for group in site.data.project_groups %}
+
+  <a href="{{ group.url | relative_url }}"
+     class="research-project-card">
+
+    {% if group.header.teaser %}
+
+      {% assign image_path = '/images/' | append: group.header.teaser %}
+
+      <img
+        src="{{ image_path | relative_url }}"
+        alt="{{ group.title | escape }}"
+        loading="lazy"
+      >
+
+    {% endif %}
+
+    <div class="research-project-content">
+
+      <h3>{{ group.title }}</h3>
+
+      <p>{{ group.excerpt }}</p>
+
+    </div>
+
+  </a>
+
 {% endfor %}
+
+</div>
 

@@ -1,0 +1,24 @@
+
+<!-- ---
+layout: archive
+title: "Research Projects"
+permalink: /portfolio/
+author_profile: true
+---
+
+<p>
+This portfolio showcases my research in adaptive control, multi-agent robotic systems, and hardware implementation.
+The projects provide brief overviews of the proposed approaches, numerical simulations, and experimental validation using networks of quadrotor UAVs.
+</p>
+
+<div class="grid__wrapper">
+
+  {% for group in site.data.project_groups %}
+
+    {% assign post = group %}
+
+    {% include archive-single.html type="grid" %}
+
+  {% endfor %}
+
+</div> -->
